@@ -86,4 +86,22 @@ document.addEventListener('DOMContentLoaded', () => {
         currentScroll = Math.min(maxScroll, currentScroll + imageWidth); //Prevent scrolling beyond felt edge
         photoSlides.scrollTo({ left: currentScroll, behavior: 'smooth' });
     });
+
+    /* For the newsletter part */
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbxwdydkILi8zmggo78rYVnGVqh3jDn_2z6uIGLLZGjkaWLBTZlnHLIG00P8jwQkE_By/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const Success = document.getElementById('Success');
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response =>{
+                Success.innerHTML="Subscribed Successfully";
+
+                setTimeout(function(){
+                    Success.innerHTML="";
+                },  3000)
+                form.reset();
+            })
+            .catch(error => console.error('Error!', error.message))
+        });
 });

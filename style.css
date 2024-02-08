@@ -11,6 +11,7 @@
 
 :root {
     --bg-purple: hsl(272, 82%, 20%);
+    --bg-primary: hsl(233.23deg 79.49% 15.29%);
     --bg-purple-light: hsla(272, 53%, 28%, 0.984);
     --orange: #FC6601;
     --orange-light: #f1d0b9;
@@ -19,7 +20,7 @@
 }
 
 ::selection{
-    background-color: hsla(271, 28%, 48%);
+    background-color: hsl(233, 77%, 24%);
 }
 
 ::-webkit-scrollbar {
@@ -28,7 +29,7 @@
 
 ::-webkit-scrollbar-track {
     /* background-color: var(--bg-purple-light); */
-    background-color: #270641;
+    background-color: hsl(233, 79%, 20%);
 }
 
 ::-webkit-scrollbar-thumb {
@@ -43,7 +44,7 @@
 html {
     scroll-behavior: smooth;
     height: 100vh;
-    background-color: #37095f;
+    background-color: #030d5a;
 }
 
 
@@ -73,7 +74,8 @@ body {
     width: 25px; /* Adjust size */
     height: 25px;
     border-radius: 50%;
-    background-color: #56118b; /* Purple */
+    /* background-color: #56118b; */
+    background-color: #050a30;
     animation: pulsate 1s infinite ease-in-out;
   }
   .blob:nth-child(2) {
@@ -180,7 +182,11 @@ section {
     position: relative;
     color: white;
     /* background: linear-gradient(#37095f, #170428); */
-    background: linear-gradient(180deg, rgb(55.00000052154064, 9.000000413507223, 95.00000193715096) 0%, rgb(23.000000528991222, 4.000000236555934, 40.00000141561031) 26.099976897239685%, rgb(34.56000432372093, 4.4700169656425714, 52.367456182837486) 51.099973917007446%, rgb(22.968232333660126, 3.640663493424654, 39.77481409907341) 73.59997630119324%, rgb(29, 4, 51) 100%);
+    /* background: linear-gradient(180deg, #37095f 0%, #170428 26.099976897239685%, #230434 51.099973917007446%, #170428 73.59997630119324%, #1d0433 100%); */
+    background: linear-gradient(180deg, rgb(3.0104160122573376, 13.161813542246819, 90.31248226761818) 0%, rgb(5.000000176951289, 10.000000353902578, 48.000000938773155) 26.099976897239685%, rgb(5.000000176951289, 10.000000353902578, 48.000000938773155) 51.099973917007446%, rgb(5.000000176951289, 10.000000353902578, 48.000000938773155) 73.59997630119324%, rgb(3.000000058673322, 12.000000234693289, 84.00000259280205) 100%);
+    
+    /* background-color: #050a30;
+    background: linear-gradient(180deg, rgb(55.00000052154064, 9.000000413507223, 95.00000193715096) 0%, rgb(23.000000528991222, 4.000000236555934, 40.00000141561031) 26.099976897239685%, rgb(34.56000432372093, 4.4700169656425714, 52.367456182837486) 51.099973917007446%, rgb(22.968232333660126, 3.640663493424654, 39.77481409907341) 73.59997630119324%, rgb(29, 4, 51) 100%); */
     /* padding-top: 6rem; */
     /* background: linear-gradient(#37095f, #170428); */
     /* overflow: hidden; */
@@ -201,10 +207,9 @@ section {
     border-radius: 35px;
     display: flex;
     padding: 8px 10px;
-    background-color: var(--bg-purple-light);
+    background-color: #080f46;
     position: relative;
 
-    /* background-color: hsla(275, 83%, 14%, 0.652); */
 }
 
 .hamburger {
@@ -275,7 +280,7 @@ nav a {
 .about-dropdown {
     display: none;
     width: max-content;
-    background-color: var(--bg-purple-light);
+    background-color: hsl(233.23deg 79.49% 15.29%);
     position: absolute;
     top: 50px;
     z-index: 1;
@@ -292,7 +297,7 @@ nav a {
 .event-dropdown {
     display: none;
     width: max-content;
-    background-color: var(--bg-purple-light);
+    background-color: hsl(233.23deg 79.49% 15.29%);
     position: absolute;
     top: 50px;
     left: 50%;
@@ -383,8 +388,6 @@ nav a:active {
 
 .cta-text {
     padding: 35px;
-    /* background-color: #f1d0b9; */
-    /* text-align: center; */
     height: 50%;
     justify-content: space-evenly;
     align-items: flex-start;
@@ -400,14 +403,9 @@ nav a:active {
     /* color: white; */
 }
 
-.newsletter-wrapper {
-    position: relative;
-}
-
 .newsletter {
     padding: 35px;
     height: 50%;
-    /* background-color: cadetblue; */
     text-align: center;
     position: relative;
     justify-content: space-evenly;
@@ -814,11 +812,6 @@ nav a:active {
     /* overflow: hidden; */
   }
   
-  /* Apply the opposite animation to the last two divs */
-  .posts-col-3, .posts-col-4 {
-    /* animation: scroll-reverse 20s infinite linear; */
-    /* overflow: hidden; */
-  }
   
   /* Define the opposite animation */
   @keyframes scroll-reverse {
@@ -836,7 +829,8 @@ nav a:active {
 footer {
     margin-top: 5rem;
     padding-top: 4rem;
-    background-color: hsl(269, 69%, 12%);
+    /* background-color: hsl(269, 69%, 12%); */
+    background-color: hsl(233.02deg 81.13% 10.39%);
 }
 
 .footer-wrapper {
@@ -941,7 +935,7 @@ footer {
     color: #fff;
     text-align: center;
     display: flex;
-    background-color: hsl(274, 79%, 7%);;
+    background-color: hsl(234, 79%, 7%);
     justify-content: center;
     margin-top: 2rem;
     padding-top: 1rem;
@@ -970,10 +964,6 @@ footer {
         min-height: 30rem;
     }
 
-    /* .hero-image {
-        display: none;
-        flex-direction: column;
-    } */
 
     .hero-section {
         flex-direction: column;
@@ -988,7 +978,7 @@ footer {
         position: sticky;
         top: 0;
         z-index: 1;
-        background-color: hsla(274, 83%, 14%, 0.9);
+        background-color: hsla(232, 84%, 15%, 0.9);
 
     }
 
